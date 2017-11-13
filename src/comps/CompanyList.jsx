@@ -9,9 +9,9 @@ render(){
 return(
 <div className='row'>
 {
-this.props.companies.map(function(companyItem,index){
-return <Company key={index} onCompClick={ this.onCompanyClick.bind(this,index) } name={companyItem.name} bgc={companyItem.bgc} description={companyItem.description} />
-},this)
+this.props.companies.map( (companyItem,index) => {
+<Company key={index} onCompClick={ this.onCompanyClick.bind(this,index) } name={companyItem.name} bgc={companyItem.bgc} description={companyItem.description} />
+})
 
 }
 </div>
