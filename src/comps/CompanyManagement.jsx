@@ -23,6 +23,13 @@ console.log("index of company : "+index)
 let selectedCompany = this.state.companies[index];
 this.setState({selectedCompany})
 }
+
+handleRemoveClick(index){
+console.log("remove : "+index);
+let companies = this.state.companies;
+companies.splice(index,1);
+this.setState({companies});
+}
 constructor(){
 super();
 this.state = {
@@ -40,7 +47,10 @@ return(
 <Header title = 'Company Management Console'/>
 <Add onAdd={this.onHandle.bind(this)} />
 <br/>
-<CompanyList onCompanyClick={this.handleCompanyClick.bind(this)} companies={this.state.companies} />
+<CompanyList
+onCompanyClick={this.handleCompanyClick.bind(this)}
+onRemoveClick={this.handleRemoveClick.bind(this)}
+companies={this.state.companies} />
 <CompanyDetails currentCompany={this.state.selectedCompany} />
 </div>
 )
