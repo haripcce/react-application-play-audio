@@ -1,8 +1,21 @@
 import React from 'react'
+import Request from 'superagent';
 import Header from 'comps/Add.jsx'
+var fileDownload = require('react-file-download')
+
 export default class Add extends React.Component {
 add(){
-this.props.onAdd(this.refs.cn.value,this.refs.cd.value);
+Request
+.post('https://o8xga1j6q4.execute-api.ap-northeast-1.amazonaws.com/prod/TextToSpeech')
+.set('Content-Type', 'application/json')
+.send({ message: "hi hari" })
+.end(function(err, res){
+console.log(res.text);
+});
+
+
+
+//this.props.onAdd(this.refs.cn.value,this.refs.cd.value);
 }
 
 render(){

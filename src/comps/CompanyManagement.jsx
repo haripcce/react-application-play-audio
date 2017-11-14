@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from 'comps/Header.jsx'
 import Add from 'comps/Add.jsx'
+import MyComponentWithSound from 'comps/MyComponentWithSound.jsx'
 import CompanyList from 'comps/CompanyList.jsx'
 import CompanyDetails from 'comps/CompanyDetails.jsx'
 
@@ -45,13 +46,10 @@ render(){
 return(
 <div>
 <Header title = 'Company Management Console'/>
-<Add onAdd={this.onHandle.bind(this)} />
+<Add/>
 <br/>
-<CompanyList
-onCompanyClick={this.handleCompanyClick.bind(this)}
-onRemoveClick={this.handleRemoveClick.bind(this)}
-companies={this.state.companies} />
-<CompanyDetails currentCompany={this.state.selectedCompany} />
+<MyComponentWithSound />
+
 </div>
 )
 
