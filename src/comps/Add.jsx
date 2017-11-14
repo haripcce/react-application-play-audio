@@ -7,7 +7,7 @@ let parent = this;
 Request
 .post('https://o8xga1j6q4.execute-api.ap-northeast-1.amazonaws.com/prod/TextToSpeech')
 .set('Content-Type', 'application/json')
-.send({ message: "hi hari" })
+.send({ message: parent.refs.cn.value })
 .end(function(err, res){
 if(res!=null){
 console.log(res.body.url);

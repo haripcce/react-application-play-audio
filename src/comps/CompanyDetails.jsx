@@ -1,5 +1,8 @@
 import React from 'react'
 
+const context = new AudioContext()
+const source = context.createBufferSource()
+
 export default class CompanyDetails extends React.Component {
 render(){
 return(

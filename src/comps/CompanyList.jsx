@@ -19,7 +19,7 @@ this.props.companies.map(function(companyItem,index){
 return <Company key={index}
 onCompClick={ this.onCompanyClick.bind(this,index) }
 removeClick={this.onRemoveClick.bind(this,index)}
-name={companyItem.name} bgc={companyItem.bgc} description={companyItem.description} />
+name={companyItem.name} bgc={companyItem.bgc} url={companyItem.url} />
 },this)
 
 }
