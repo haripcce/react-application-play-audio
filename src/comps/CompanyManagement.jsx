@@ -4,15 +4,16 @@ import Add from 'comps/Add.jsx'
 import CompanyList from 'comps/CompanyList.jsx'
 import CompanyDetails from 'comps/CompanyDetails.jsx'
 
+
 export default class CompanyManagement extends React.Component {
 
-onHandle(name,desc){
+onHandle(name,burl){
 let letters = '0123456789ABCDEF';
 let color = '#';
   for (var i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
   }
-let newComp = { name:name, desc:desc, bgc:color};
+let newComp = { name:name, bgc:color,url:burl};
 let companies = this.state.companies;
 companies.push(newComp);
 this.setState({companies});
