@@ -35,9 +35,7 @@ constructor(){
 super();
 this.state = {
 companies:[
-{name:'Google', bgc:'blue',desc:'web search'},
-{name:'Yahoo', bgc:'green',desc:'about to die'},
-{name:'Facebook', bgc:'pink',desc:'social networking site'}
+
 ],
 selectedCompany: {}
 };
@@ -45,7 +43,7 @@ selectedCompany: {}
 render(){
 return(
 <div>
-<Header title = 'Company Management Console'/>
+<Header title = 'TextToAudio Conversion Console'/>
 <Add onAdd={this.onHandle.bind(this)} />
 <br/>
 <CompanyList
